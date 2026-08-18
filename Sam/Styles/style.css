@@ -1,0 +1,18 @@
+body {
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+}
+
+.containerimg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerimg img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
