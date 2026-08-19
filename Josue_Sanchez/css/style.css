@@ -1,9 +1,40 @@
 body {
-    background-color: rgb(69, 136, 136);
-
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 40px;
 }
 
-h1{ 
+h1 {
+    background-color: #1f4e5f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+}
 
-    color: darkgrey;
+h2 {
+    color: #1f4e5f;
+    border-bottom: 2px solid #1f4e5f;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #3b7a8c;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    line-height: 1.8;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 5px solid #1f4e5f;
 }
