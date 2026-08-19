@@ -53,6 +53,17 @@ li {
     margin-bottom: 12px;
 }
 
+.foto {
+    text-align: center;
+}
+
+.foto img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
 footer {
     background-color: #222;
     color: white;
