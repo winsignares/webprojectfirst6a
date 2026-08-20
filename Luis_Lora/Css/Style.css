@@ -18,7 +18,6 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* ENCABEZADO */
 
 .encabezado {
     background-color: #17365d;
@@ -27,6 +26,18 @@ body {
     margin: -45px -55px 35px -55px;
     text-align: center;
 }
+
+.encabezado .profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 4px solid white;
+}
+
 
 .encabezado h1 {
     margin: 0 0 10px 0;
@@ -38,7 +49,6 @@ body {
     font-size: 16px;
 }
 
-/* SECCIONES */
 
 section {
     margin-bottom: 30px;
@@ -61,7 +71,6 @@ p {
     line-height: 1.6;
 }
 
-/* FORMACION Y PROYECTOS */
 
 .item {
     margin-bottom: 20px;
@@ -75,7 +84,8 @@ p {
     margin-top: 0;
 }
 
-/* HABILIDADES */
+
+
 
 .habilidades {
     display: flex;
@@ -91,13 +101,15 @@ p {
     font-size: 14px;
 }
 
-/* LISTAS Y TEXTOS */
 
 strong {
     color: #17365d;
 }
 
-/* DISEÑO PARA CELULARES */
+
+/* =========================
+   DISEÑO PARA CELULARES
+   ========================= */
 
 @media (max-width: 600px) {
 
@@ -119,5 +131,10 @@ strong {
 
     h2 {
         font-size: 19px;
+    }
+
+    .encabezado .profile-img {
+        width: 120px;
+        height: 120px;
     }
 }
