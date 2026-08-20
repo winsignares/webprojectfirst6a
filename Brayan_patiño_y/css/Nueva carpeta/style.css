@@ -1,5 +1,126 @@
+/* Configuración general */
 body {
-     
-     background-color: #df5fd0;
+    background-color: #062139;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 40px 20px;
+}
 
+/* Tarjeta principal */
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #042741;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Encabezado */
+.header-cv {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 2px solid #4da3d9;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Foto */
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4da3d9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Nombre */
+.header-info h1 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+/* Datos personales */
+.header-info p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+/* Títulos */
+h2 {
+    color: #63c5ff;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+/* Subtítulos */
+h3 {
+    color: #ffffff;
+    margin-bottom: 4px;
+    font-size: 1.05rem;
+}
+
+/* Párrafos */
+p {
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Líneas */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #2f6385;
+    margin: 20px 0;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+/* Negritas */
+strong {
+    color: #63c5ff;
+}
+
+/* Adaptación para celular */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .cv-container {
+        padding: 25px;
+    }
+
+    .header-cv {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-info h1 {
+        font-size: 1.5rem;
+    }
 }

@@ -1,0 +1,29 @@
+body {
+    background-color: #1e1e2f;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #f5c542;
+}
+
+img {
+    width: 150px;
+    border-radius: 50%; 
+}
+
+h2 {
+    color: #42c5f5;
+}
+ 
+h3 {
+    color: #a29bfe; 
+}
+ 
+p {
+    color: #f5f5f5; 
+}
+ 
+li {
+    color: #b2bec3; 
+}

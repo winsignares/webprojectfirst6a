@@ -1,0 +1,92 @@
+/* Configuración general */
+body {
+    background-color: #2b5b84; /* Azul elegante y profesional */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Tarjeta principal contenedora */
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado con Foto y Nombre */
+.header-cv {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 2px solid #2b5b84;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2b5b84;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-info h1 {
+    color: #1a365d;
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+.header-info p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+}
+
+/* Títulos de secciones */
+h2 {
+    color: #2b5b84;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+/* Subtítulos */
+h3 {
+    color: #2d3748;
+    margin-bottom: 4px;
+    font-size: 1.05rem;
+}
+
+/* Líneas divisorias */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 20px 0;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Ajuste responsive para celulares */
+@media (max-width: 600px) {
+    .header-cv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
