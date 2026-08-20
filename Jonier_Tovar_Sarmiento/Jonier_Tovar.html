@@ -7,22 +7,79 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!--Titulo-->
-    <h1>Jonier Tovar</h1>
+    <div class="container">
 
-    <!--Imagen de presentacion-->
-    <img src="img/J_P.png" alt="Foto de presentación de Jonier Tovar" width="100">
+        <!--Encabezado-->
+        <header>
+            <img class="foto-perfil" src="img/J_P.png" alt="Foto de presentación de Jonier Tovar">
+            <div class="header-texto">
+                <h1>Jonier <span>Tovar</span></h1>
+                <p class="subtitulo">Ingeniería de Sistemas</p>
+            </div>
+        </header>
 
-    <!--Parrafo de presentacion-->
-    <p>Ingeniero de sistemas en formacion con sólidos conocimientos en
-    diseño de bases de datos relacionales, arquitectura de software y
-    programación orientada a objetos. Apasionado por resolver
-    problemas de lógica, optimizar procesos mediante el desarrollo
-    backend y diseñar modelos de datos escalables.</p>
+        <!--Sobre mí-->
+        <section>
+            <h2>Sobre mí</h2>
+            <p>Ingeniero de sistemas en formación con sólidos conocimientos en
+            diseño de bases de datos relacionales, arquitectura de software y
+            programación orientada a objetos. Apasionado por resolver
+            problemas de lógica, optimizar procesos mediante el desarrollo
+            backend y diseñar modelos de datos escalables.</p>
+        </section>
 
-    <!--Imagen de la hoja de vida-->
-    <h2>Mi Hoja de Vida</h2>
-    <img src="img/jonier_cv.png" alt="Hoja de vida de Jonier Tovar" width="300">
+        <!--Habilidades-->
+        <section>
+            <h2>Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">Node.js</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">MySQL / PostgreSQL</div>
+                <div class="skill-tag">Prisma</div>
+                <div class="skill-tag">Docker</div>
+                <div class="skill-tag">Git / GitHub</div>
+                <div class="skill-tag">UML / StarUML</div>
+            </div>
+        </section>
 
+        <!--Educación-->
+        <section>
+            <h2>Educación</h2>
+            <ul>
+                <li>Ingeniería de Sistemas — Universidad Libre, Bogotá (en curso)</li>
+                <li>Fundamentos de bases de datos, redes, sistemas operativos y desarrollo backend</li>
+            </ul>
+        </section>
+
+        <!--Proyectos-->
+        <section>
+            <h2>Proyectos destacados</h2>
+            <ul>
+                <li>UniFind — sistema de gestión de objetos perdidos universitarios (Node.js, Express, PostgreSQL, Prisma)</li>
+                <li>Museo Digital Interactivo — plataforma web para el programa de ingeniería de sistemas</li>
+            </ul>
+        </section>
+
+        <!--Hoja de vida-->
+        <section>
+            <h2>Mi Hoja de Vida</h2>
+            <img class="cv-img" src="img/jonier_cv.png" alt="Hoja de vida de Jonier Tovar" width="500">
+        </section>
+
+        <!--Contacto-->
+        <section>
+            <h2>Contacto</h2>
+            <div class="contacto-box">
+                <p>¿Quieres saber más sobre mis proyectos?</p>
+                <a href="mailto:Jonier.tovar@universidadlibre.edu.co">Jonier.tovar@universidadlibre.edu.co</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Jonier Tovar — Universidad Libre</p>
+        </footer>
+
+    </div>
 </body>
-</html> 
+</html>
