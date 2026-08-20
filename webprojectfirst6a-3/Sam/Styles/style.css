@@ -1,0 +1,512 @@
+/* =========================================================
+   HOJA DE VIDA - SAMUEL DAVID LEÓN MARTENCO
+   Diseño Minimalista, Limpio y Ejecutivo (Azul & Blanco)
+   ========================================================= */
+
+:root {
+    /* Paleta Azul & Blanco */
+    --primary-navy: #0f2b5c;       /* Azul marino corporativo */
+    --primary-blue: #1d4ed8;       /* Azul real */
+    --primary-light: #2563eb;      /* Azul principal */
+    --accent-sky: #0284c7;         /* Azul complementario */
+
+    /* Neutros y Superficies */
+    --bg-page: #f1f5f9;            /* Fondo de página */
+    --bg-white: #ffffff;           /* Blanco puro para hoja */
+    --bg-sidebar: #f8fafc;         /* Gris muy sutil para sidebar */
+    
+    /* Textos */
+    --text-heading: #0f172a;       /* Negro/slate principal */
+    --text-body: #334155;          /* Gris oscuro para lectura */
+    --text-muted: #64748b;         /* Gris medio para fechas/subtítulos */
+    --text-light: #f8fafc;         /* Blanco */
+    
+    /* Bordes y Líneas finas */
+    --border-divider: #e2e8f0;
+    --border-active: #cbd5e1;
+    
+    /* Tipografía */
+    --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* =========================================================
+   RESETEO BÁSICO
+   ========================================================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    line-height: 1.6;
+    padding: 2.5rem 1rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================================
+   DOCUMENTO PRINCIPAL (HOJA DE CV FORMAL)
+   ========================================================= */
+.cv-container {
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    border: 1px solid var(--border-divider);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+/* =========================================================
+   HEADER / ENCABEZADO (AZUL MARINO Y BLANCO)
+   ========================================================= */
+.cv-header {
+    background-color: var(--primary-navy);
+    color: var(--text-light);
+    padding: 2.5rem 2.25rem 2rem;
+    border-bottom: 3px solid var(--primary-light);
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* FOTO */
+.avatar-wrapper {
+    flex-shrink: 0;
+}
+
+.avatar-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    display: block;
+    background-color: #e2e8f0;
+}
+
+/* TEXTOS CABECERA */
+.header-details {
+    flex: 1;
+}
+
+.role-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #93c5fd;
+    margin-bottom: 0.35rem;
+}
+
+.candidate-name {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.candidate-summary {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+    max-width: 660px;
+}
+
+/* CONTACTOS */
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    text-decoration: none;
+}
+
+.contact-item i {
+    color: #60a5fa;
+    font-size: 0.82rem;
+}
+
+a.contact-item:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* =========================================================
+   CUERPO DEL CV (2 COLUMNAS SIN BORDES PESADOS)
+   ========================================================= */
+.cv-body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 600px;
+}
+
+/* =========================================================
+   SIDEBAR (COLUMNA IZQUIERDA - MINIMALISTA)
+   ========================================================= */
+.cv-sidebar {
+    background-color: var(--bg-sidebar);
+    padding: 2rem 1.5rem;
+    border-right: 1px solid var(--border-divider);
+    display: flex;
+    flex-direction: column;
+    gap: 1.85rem;
+}
+
+/* =========================================================
+   MAIN (COLUMNA DERECHA - SIN CAJAS)
+   ========================================================= */
+.cv-main {
+    padding: 2rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--bg-white);
+}
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN (LÍNEA FINA Y SOBRIA)
+   ========================================================= */
+.cv-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-heading {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 1.5px solid var(--primary-light);
+}
+
+/* =========================================================
+   COMPETENCIAS (LISTA LIMPIA Y MINIMALISTA)
+   ========================================================= */
+.skills-clean-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.skills-clean-list li {
+    font-size: 0.84rem;
+    color: var(--text-body);
+    font-weight: 500;
+    position: relative;
+    padding-left: 0.9rem;
+    line-height: 1.45;
+}
+
+.skills-clean-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-light);
+    font-weight: bold;
+}
+
+/* =========================================================
+   IDIOMAS
+   ========================================================= */
+.lang-item {
+    margin-bottom: 0.85rem;
+}
+
+.lang-item:last-child {
+    margin-bottom: 0;
+}
+
+.lang-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.84rem;
+    margin-bottom: 0.3rem;
+}
+
+.lang-title {
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+.lang-level {
+    font-size: 0.78rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.lang-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--border-divider);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.lang-fill {
+    height: 100%;
+    background-color: var(--primary-blue);
+    border-radius: 2px;
+}
+
+/* =========================================================
+   LISTAS LATERALES (APTITUDES & INTERESES)
+   ========================================================= */
+.sidebar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.sidebar-list li {
+    font-size: 0.84rem;
+    color: var(--text-body);
+    position: relative;
+    padding-left: 0.9rem;
+    line-height: 1.45;
+}
+
+.sidebar-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-light);
+}
+
+.info-row {
+    font-size: 0.84rem;
+    color: var(--text-body);
+    margin-bottom: 0.35rem;
+}
+
+.info-row span {
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+/* =========================================================
+   ENTRADAS PRINCIPALES (EXPERIENCIA & FORMACIÓN)
+   Sin cajas, sin bordes raros a la izquierda
+   ========================================================= */
+.entry-item {
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.entry-item:last-child {
+    margin-bottom: 0;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.entry-title {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    line-height: 1.3;
+}
+
+.entry-subtitle {
+    font-size: 0.84rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-top: 0.1rem;
+}
+
+.entry-date {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.entry-text {
+    font-size: 0.85rem;
+    color: var(--text-body);
+    line-height: 1.55;
+    margin-top: 0.2rem;
+}
+
+.entry-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: 0.3rem;
+}
+
+.entry-bullets li {
+    font-size: 0.85rem;
+    color: var(--text-body);
+    position: relative;
+    padding-left: 1.1rem;
+    line-height: 1.5;
+}
+
+.entry-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0.15rem;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+}
+
+.entry-bullets li strong {
+    color: var(--text-heading);
+    font-weight: 600;
+}
+
+/* =========================================================
+   FIRMA
+   ========================================================= */
+.signature-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-divider);
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.signature-place {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.signature-line-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+}
+
+.sig-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-heading);
+    margin-bottom: 0.4rem;
+}
+
+.sig-name {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.sig-sub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.cv-footer {
+    background-color: var(--bg-sidebar);
+    border-top: 1px solid var(--border-divider);
+    text-align: center;
+    padding: 0.85rem;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+}
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+@media (max-width: 768px) {
+    .cv-body {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-divider);
+        padding: 1.5rem;
+    }
+
+    .cv-main {
+        padding: 1.5rem;
+    }
+
+    .header-main {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.25rem;
+    }
+
+    .contact-list {
+        justify-content: center;
+    }
+
+    .candidate-summary {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .entry-header {
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+}
+
+/* =========================================================
+   IMPRESIÓN (CTRL + P / PDF)
+   ========================================================= */
+@media print {
+    body {
+        background-color: #ffffff !important;
+        padding: 0 !important;
+    }
+
+    .cv-container {
+        border: none !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+    }
+
+    .cv-header {
+        background: #0f2b5c !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
