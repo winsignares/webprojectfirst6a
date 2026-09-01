@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink - Objetos Perdidos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        header {
+            background-color: #5d1b1b;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #5d1b1b;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #ffc72c;
+            color: #5d1b1b;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 0 10px;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn-secondary {
+            background-color: #5d1b1b;
+            color: white;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            color: #5d1b1b;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #5d1b1b;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5d1b1b;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>CampusLink</h2>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Ver Objetos</a>
+            <a href="#">Iniciar Sesión</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>¿Perdiste algo en el campus?</h1>
+        <p>Encuentra lo que olvidaste o reporta un objeto que hayas hallado de forma rápida y segura.</p>
+        <div>
+            <a href="Reportar.html" class="btn">Reportar Objeto Perdido</a>
+            <a href="#" class="btn btn-secondary">Ver Listado General</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Últimos objetos reportados</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Cédula de Ciudadanía</h3>
+                <p><strong>Lugar:</strong> Cerca de la cafetería central</p>
+                <p><strong>Fecha:</strong> 1 de Septiembre</p>
+                <span style="color: #e67e22; font-weight: bold;">Perdido</span>
+            </div>
+            <div class="card">
+                <h3>Termo Hydro Flask (Azul)</h3>
+                <p><strong>Lugar:</strong> Biblioteca - 2do piso</p>
+                <p><strong>Fecha:</strong> 31 de Agosto</p>
+                <span style="color: #27ae60; font-weight: bold;">Encontrado</span>
+            </div>
+            <div class="card">
+                <h3>Calculadora Científica Casio</h3>
+                <p><strong>Lugar:</strong> Bloque de Ingenierías</p>
+                <p><strong>Fecha:</strong> 30 de Agosto</p>
+                <span style="color: #e67e22; font-weight: bold;">Perdido</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CampusLink - Sistema de Objetos Perdidos Universitario</p>
+    </footer>
+
+</body>
+</html>

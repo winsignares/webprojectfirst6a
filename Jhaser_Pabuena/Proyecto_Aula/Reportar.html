@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Objeto - CampusLink</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        header {
+            background-color: #5d1b1b;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #5d1b1b;
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #5d1b1b;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .btn-submit {
+            background-color: #ffc72c;
+            color: #5d1b1b;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .btn-submit:hover {
+            background-color: #e6b325;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>CampusLink</h2>
+        <nav>
+            <a href="Proyecto_Aula.html">Inicio</a>
+            <a href="reportar.html">Reportar Objeto</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Registrar Objeto Perdido o Encontrado</h2>
+        <form>
+            <div class="form-group">
+                <label for="tipo">Tipo de Reporte:</label>
+                <select id="tipo" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="perdido">He perdido un objeto</option>
+                    <option value="encontrado">He encontrado un objeto</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="titulo">Nombre del Objeto:</label>
+                <input type="text" id="titulo" placeholder="Ej. Carné estudiantil, Llaves, Termo..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="documentos">Documentos / Identificación</option>
+                    <option value="electronica">Tecnología / Electrónica</option>
+                    <option value="accesorios">Accesorios / Ropa</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ubicacion">Lugar aproximado:</label>
+                <input type="text" id="ubicacion" placeholder="Ej. Biblioteca, Cafetería central, Bloque C..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción detallada:</label>
+                <textarea id="descripcion" placeholder="Agrega marcas, colores o detalles particulares..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Publicar Reporte</button>
+        </form>
+    </div>
+
+</body>
+</html>
