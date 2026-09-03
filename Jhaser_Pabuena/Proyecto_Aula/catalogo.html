@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink - Catálogo de Objetos</title>
+    <style>
+        :root {
+            --vino-tinto: #5c2024;
+            --dorado: #ffc72c;
+            --fondo-claro: #f8f9fa;
+            --texto-oscuro: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--fondo-claro);
+            color: var(--texto-oscuro);
+        }
+
+        /* Barra de navegación */
+        header {
+            background-color: var(--vino-tinto);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--dorado);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--dorado);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--dorado);
+        }
+
+        /* Contenido principal */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .catalog-title {
+            margin-bottom: 1.5rem;
+            color: var(--vino-tinto);
+            font-size: 1.8rem;
+        }
+
+        /* Barra de búsqueda y filtros */
+        .filters-section {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .filter-select {
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: white;
+            font-size: 1rem;
+        }
+
+        /* Cuadrícula de tarjetas */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+            border-top: 4px solid var(--vino-tinto);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .card-body {
+            padding: 1.25rem;
+        }
+
+        .card-category {
+            display: inline-block;
+            font-size: 0.75rem;
+            background-color: rgba(92, 32, 36, 0.1);
+            color: var(--vino-tinto);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--texto-oscuro);
+        }
+
+        .card-info {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .btn-detail {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--vino-tinto);
+            color: white;
+            padding: 0.6rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .btn-detail:hover {
+            background-color: #45171a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header institucional -->
+    <header>
+        <a href="index.html" class="logo">Campus<span>Link</span></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" style="color: var(--dorado);">Catálogo</a>
+            <a href="Reportar.html">Reportar Objeto</a>
+        </nav>
+    </header>
+
+    <!-- Contenido del Catálogo -->
+    <div class="container">
+        <h1 class="catalog-title">Objetos Reportados en el Campus</h1>
+
+        <!-- Filtros y Búsqueda -->
+        <div class="filters-section">
+            <input type="text" class="search-input" placeholder="Buscar por palabra clave (ej. llaves, carné, libro)...">
+            <select class="filter-select">
+                <option value="">Todas las categorías</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="documentos">Documentos / Carnés</option>
+                <option value="libros">Libros y Apuntes</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+        </div>
+
+        <!-- Cuadrícula de Elementos -->
+        <div class="grid">
+            <!-- Tarjeta 1 -->
+            <div class="card">
+                <div class="card-img">[ Imagen del Objeto ]</div>
+                <div class="card-body">
+                    <span class="card-category">Documentos</span>
+                    <h3 class="card-title">Carné Estudiantil - Ing. Sistemas</h3>
+                    <p class="card-info"> Hallado en: Biblioteca Central (Piso 2)</p>
+                    <p class="card-info"> Fecha: 2 de Junio, 2026</p>
+                    <a href="detalle.html" class="btn-detail">Ver más detalles</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card">
+                <div class="card-img">[ Imagen del Objeto ]</div>
+                <div class="card-body">
+                    <span class="card-category">Tecnología</span>
+                    <h3 class="card-title">Calculadora Científica Casio</h3>
+                    <p class="card-info"> Hallado en: Bloque B - Aula 304</p>
+                    <p class="card-info"> Fecha: 1 de Junio, 2026</p>
+                    <a href="detalle.html" class="btn-detail">Ver más detalles</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card">
+                <div class="card-img">[ Imagen del Objeto ]</div>
+                <div class="card-body">
+                    <span class="card-category">Accesorios</span>
+                    <h3 class="card-title">Chaqueta deportiva negra</h3>
+                    <p class="card-info"> Hallado en: Canchas múltiples</p>
+                    <p class="card-info"> Fecha: 30 de Mayo, 2026</p>
+                    <a href="detalle.html" class="btn-detail">Ver más detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
